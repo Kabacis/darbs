@@ -31,6 +31,9 @@ class User extends Authenticatable
 
         return $this->belongsTo(Pasparvalde::class);
     }
+    public function resursi (){
+        return $this->hasMany(Resursi::class);
+    }
     public function comments (){
         return $this->hasMany(Comment::class);
     }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pasparvalde;
 use App\Resursi;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ResursiController extends Controller
 {
@@ -14,11 +14,17 @@ class ResursiController extends Controller
         Resursi::create([
             'title' => request('title'),
             'pasparvalde_id' => $pasparvalde->id,
-            'description' => request('description')
+            'description' => request('description'),
+            'user_id' => Auth::user()->id,
 
         ]);
 
         return back();
+    }
+
+    public function show(){
+
+        return view('resurss_viens');
     }
 
 }

@@ -9,7 +9,7 @@ class PasparvaldeController extends Controller
 {
     public function showSP(){
 
-        $pasparvalde = Pasparvalde::latest()->get();
+        $pasparvalde = Pasparvalde::get();
         return view('visas_sp', compact('pasparvalde'));
     }
 

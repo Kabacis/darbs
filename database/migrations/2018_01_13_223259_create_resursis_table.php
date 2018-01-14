@@ -18,6 +18,7 @@ class CreateResursisTable extends Migration
             $table->string('title');
             $table->mediumText('description');
             $table->integer('pasparvalde_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

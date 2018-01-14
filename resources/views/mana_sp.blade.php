@@ -7,7 +7,7 @@
         <h2>{{ $pasparvalde->tag }}</h2>
         <h4>{{ $pasparvalde->title }}</h4>
         <h6>Adrese: {{$pasparvalde->adress}}</h6>
-        <h6>Telefons: 29346314</h6>
+        <h6>Telefons: 26144275</h6>
 
         <hr>
 
@@ -15,8 +15,11 @@
 
         @foreach($pasparvalde->resursi as $resursi)
             <ul>
-                <li> <strong> {{  $resursi->title }} </strong> </li>
-                    {{  $resursi->description }}
+                 <strong> {{  $resursi->title }} </strong><br>
+                    {{  $resursi->description }} <br>
+                    Pievienoja: {{ $resursi->user->name }}
+                                {{ $resursi->created_at->format('Y-m-d') }}<br>
+                <a href="{{ url('/SP/'. $pasparvalde->id.'/'.$resursi->id) }}">Komentāri</a>
             </ul>
         @endforeach
 
@@ -27,7 +30,7 @@
         @foreach($pasparvalde->user as $user)
             <ul>
                 <li> {{ $user->name }} </li>
-                <p>{{ $user->email }}</p>
+                {{ $user->email }}
             </ul>
         @endforeach
 

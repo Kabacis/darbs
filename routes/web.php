@@ -22,11 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/SP', 'PasparvaldeController@showSP');          ///visas SP
-Route::get('/SP/{pasparvalde}', 'PasparvaldeController@show');
+Route::get('/SP/{pasparvalde}', 'PasparvaldeController@show'); ///konkrētā SP
 
 Route::post('/SP/{pasparvalde}/resursi', 'ResursiController@store');    ///pievienot resursu
 
-Route::get('/admin', 'UsersController@admin');
+Route::get('/admin', 'UsersController@admin');                          ///adminu skats
+Route::get('/SP/{pasparvalde}/{resurss}', 'ResursiController@show');    ///resursa skats
 
 
 ///2 meklēšanas - resursu un lietotāju
