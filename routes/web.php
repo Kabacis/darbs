@@ -29,6 +29,8 @@ Route::post('/SP/{pasparvalde}/resursi', 'ResursiController@store');    ///pievi
 Route::get('/admin', 'UsersController@admin');                          ///adminu skats
 Route::get('/SP/{pasparvalde}/{resurss}', 'ResursiController@show');    ///resursa skats
 
+Route::post('/SP/comment', 'CommentController@store');                  ///pievienot komentāru
+
 
 ///2 meklēšanas - resursu un lietotāju
 Route::any('/search_user',function(){
@@ -46,3 +48,5 @@ Route::any('/search',function(){
         return view('welcome')->withDetails($resurss)->withQuery ( $q );
     else return view ('welcome')->withMessage('No Details found. Try to search again !');
 });
+
+Route::get('/delete_acc', 'UsersController@destroy');  ///dzēst savu lietotāju
