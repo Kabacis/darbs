@@ -21,15 +21,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/SP', 'PasparvaldeController@showSP');          ///visas SP
-Route::get('/SP/{pasparvalde}', 'PasparvaldeController@show'); ///konkrētā SP
+Route::get('/SP', 'PasparvaldeController@showSP');                      ///visas SP
+Route::get('/SP/{pasparvalde}', 'PasparvaldeController@show');          ///konkrētā SP
 
 Route::post('/SP/{pasparvalde}/resursi', 'ResursiController@store');    ///pievienot resursu
-
-Route::get('/admin', 'UsersController@admin');                          ///adminu skats
 Route::get('/SP/{pasparvalde}/{resurss}', 'ResursiController@show');    ///resursa skats
 
+Route::get('/profile', 'UsersController@show');                         ///atvērt lietotāja profilu
+Route::get('/admin', 'UsersController@admin');                          ///adminu skats
+Route::get('/delete_acc', 'UsersController@destroy');                   ///dzēst savu lietotāju
+Route::post('/profile/edit', 'UsersController@edit');                   ///rediģēt vārdu
+
 Route::post('/SP/comment', 'CommentController@store');                  ///pievienot komentāru
+
 
 
 ///2 meklēšanas - resursu un lietotāju
@@ -49,4 +53,3 @@ Route::any('/search',function(){
     else return view ('welcome')->withMessage('No Details found. Try to search again !');
 });
 
-Route::get('/delete_acc', 'UsersController@destroy');  ///dzēst savu lietotāju

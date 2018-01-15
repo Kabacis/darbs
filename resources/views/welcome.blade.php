@@ -11,7 +11,5 @@
         </div>
     </div>
     <br>
-    @auth
-        <a href="/delete_acc">Dzēst savu lietotāju!</a>
-    @endauth
+
 @endsection

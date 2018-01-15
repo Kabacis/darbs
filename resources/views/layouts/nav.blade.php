@@ -8,7 +8,7 @@
                             <a class="nav-link active" href="{{ url('/') }}">Home</a>
                             <a class="nav-link" href="{{ url('/SP') }}">Visas SP</a>
                             <a class="nav-link" href="{{ url('/admin') }}">Admini</a>
-                            <a href="#" class="nav-link ">
+                            <a href="/profile" class="nav-link ">
                                 {{ Auth::user()->name }}
                             </a>
 

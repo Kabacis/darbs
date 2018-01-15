@@ -18,8 +18,8 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Name</th>
-            <th>Email</th>
+            <th>Vārds</th>
+            <th>Uzvārds</th>
         </tr>
         </thead>
         <tbody>
