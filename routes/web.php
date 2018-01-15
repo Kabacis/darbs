@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Input;
 use App\User;
+use Illuminate\Support\Facades\App;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +18,10 @@ use App\User;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/language', array (
+    'Middleware' => 'Language',
+    'uses' => 'LanguageController@index',
+));
 
 Auth::routes();
 
@@ -28,12 +34,19 @@ Route::post('/SP/{pasparvalde}/resursi', 'ResursiController@store');    ///pievi
 Route::get('/SP/{pasparvalde}/{resurss}', 'ResursiController@show');    ///resursa skats
 
 Route::get('/profile', 'UsersController@show');                         ///atvērt lietotāja profilu
-Route::get('/admin', 'UsersController@admin');                          ///adminu skats
+Route::get('/admin', 'UsersController@admin')->middleware('admin');     ///adminu skats
 Route::get('/delete_acc', 'UsersController@destroy');                   ///dzēst savu lietotāju
 Route::post('/profile/edit', 'UsersController@edit');                   ///rediģēt vārdu
 
 Route::post('/SP/comment', 'CommentController@store');                  ///pievienot komentāru
 
+
+
+
+//Route::get('/locale/{lang?}', function ($lang=null){
+//    App::setlocale($lang);
+//    return view ('test');
+//});
 
 
 ///2 meklēšanas - resursu un lietotāju
@@ -52,4 +65,3 @@ Route::any('/search',function(){
         return view('welcome')->withDetails($resurss)->withQuery ( $q );
     else return view ('welcome')->withMessage('No Details found. Try to search again !');
 });
-

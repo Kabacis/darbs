@@ -14,12 +14,12 @@
 
 @if(isset($details))
     <p> The Search results for your query <b> {{ $query }} </b> are :</p>
-    <h2>Sample User details</h2>
+    <h2>Rezultāti</h2>
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Vārds</th>
-            <th>Uzvārds</th>
+            <th>Vārds Uzvārds</th>
+            <th>Epasts</th>
         </tr>
         </thead>
         <tbody>

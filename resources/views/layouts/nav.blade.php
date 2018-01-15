@@ -5,7 +5,7 @@
                 @if (Route::has('login'))
                     <div class="nav">
                         @auth
-                            <a class="nav-link active" href="{{ url('/') }}">Home</a>
+                            <a class="nav-link active" href="{{ url('/') }}">{{trans('messages.home')}}</a>
                             <a class="nav-link" href="{{ url('/SP') }}">Visas SP</a>
                             <a class="nav-link" href="{{ url('/admin') }}">Admini</a>
                             <a href="/profile" class="nav-link ">
@@ -17,6 +17,8 @@
                                                      document.getElementById('logout-form').submit();">
                                 Logout
                             </a>
+                            <a class="nav-link active" href="{{ url('/') }}">ENG</a>
+                            <a class="nav-link active" href="{{ url('/') }}">LV</a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}
