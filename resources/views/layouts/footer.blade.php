@@ -1,6 +1,8 @@
 <footer class="blog-footer">
-    <p>SP resursi Kārlis Andrejs Lācis (st.apl.nr. kl16051).</p>
+    <p>@lang('messages.karlis')</p>
     <p>
-        <a href="#">Back to top</a>
+        <a href="#">@lang('messages.back_up')</a>
     </p>
+
+    @include('formas.nomainit_valodu')
 </footer>

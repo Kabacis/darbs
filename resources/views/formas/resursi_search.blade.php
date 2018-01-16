@@ -1,11 +1,11 @@
-<h4>Meklēt resursu</h4>
+<h4>@lang('messages.sr')</h4>
 <form action="/search" method="POST" role="search">
     {{ csrf_field() }}
     <div class="input-group">
         <input type="text" class="form-control" name="resurss"
-               placeholder="Meklēt resursu"> <span class="input-group-btn">
+               placeholder="@lang('messages.sr')"> <span class="input-group-btn">
             <button type="submit" class="btn btn-default">
-                <span class="glyphicon glyphicon-search">Meklēt</span>
+                <span class="glyphicon glyphicon-search">@lang('messages.search')</span>
             </button>
         </span>
     </div>
@@ -13,15 +13,15 @@
 
 
 @if(isset($details))
-    <p> Resursi, kuru nosaukumā/aprakstā ir <b> {{ $query }} </b> :</p>
-    <h5>Resursi</h5>
+    <p> @lang('messages.ic') &nbsp;<b> {{ $query }} </b> :</p>
+    <h5>@lang('messages.items')</h5>
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Resurss</th>
-            <th>Apraksts</th>
-            <th>Pašpārvalde</th>
-            <th>Adrese</th>
+            <th>@lang('messages.items1')</th>
+            <th>@lang('messages.description')</th>
+            <th>@lang('messages.council')</th>
+            <th>@lang('messages.adress')</th>
         </tr>
         </thead>
         <tbody>

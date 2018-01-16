@@ -5,5 +5,5 @@
         </a>
     </h2>
     <p>{{$pasparvalde->title}}</p>
-    <p>Adrese: {{ $pasparvalde->adress }}</p>
+    <p>@lang('messages.adress')&nbsp;:&nbsp; {{ $pasparvalde->adress }}</p>
 </div>

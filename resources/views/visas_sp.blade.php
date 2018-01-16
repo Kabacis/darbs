@@ -4,7 +4,7 @@
 
 <div class="col-sm-8 blog-main">
 
-    <p>Mūsu SP</p>
+    <p>@lang('messages.sc')</p>
     @foreach($pasparvalde as $pasparvalde)
         @include('spdati')
     @endforeach

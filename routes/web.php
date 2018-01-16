@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\App;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/language', array (
+Route::post('/language', array (                                        ///laiks mainīt valodu
     'Middleware' => 'Language',
     'uses' => 'LanguageController@index',
 ));
@@ -40,13 +40,6 @@ Route::post('/profile/edit', 'UsersController@edit');                   ///redi�
 
 Route::post('/SP/comment', 'CommentController@store');                  ///pievienot komentāru
 
-
-
-
-//Route::get('/locale/{lang?}', function ($lang=null){
-//    App::setlocale($lang);
-//    return view ('test');
-//});
 
 
 ///2 meklēšanas - resursu un lietotāju

@@ -5,22 +5,22 @@
         {{ csrf_field() }}
 
 
-        <h5>Pievienot jaunu resursu:</h5>
+        <h5>@lang('messages.add')</h5>
 
         <div class="form-group">
-            <label for="title">Resursa nosaukums: </label>
-            <textarea name="title" placeholder="Nosaukums" class="form-control"></textarea>
+            <label for="title">@lang('messages.title') </label>
+            <textarea name="title" placeholder="@lang('messages.title')" class="form-control"></textarea>
 
         </div>
 
         <div class="form-group">
-            <label for="description">Resursa apraksts: </label>
-            <textarea name="description" placeholder="Apraksts" class="form-control"></textarea>
+            <label for="description">@lang('messages.description')</label>
+            <textarea name="description" placeholder="@lang('messages.description')" class="form-control"></textarea>
 
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary"> Publicēt! </button>
+            <button type="submit" class="btn btn-primary"> @lang('messages.publish') </button>
         </div>
     </form>
 </div>
