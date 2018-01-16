@@ -33,7 +33,8 @@ Route::get('/SP/{pasparvalde}', 'PasparvaldeController@show');          ///konkr
 Route::post('/SP/{pasparvalde}/resursi', 'ResursiController@store');    ///pievienot resursu
 Route::get('/SP/{pasparvalde}/{resurss}', 'ResursiController@show');    ///resursa skats
 
-Route::get('/profile', 'UsersController@show');                         ///atvērt lietotāja profilu
+Route::get('profile', 'UsersController@show');                         ///atvērt lietotāja profilu
+Route::post('profile','UsersController@update_avatar');
 Route::get('/admin', 'UsersController@admin')->middleware('admin');     ///adminu skats
 Route::get('/delete_acc', 'UsersController@destroy');                   ///dzēst savu lietotāju
 Route::post('/profile/edit', 'UsersController@edit');                   ///rediģēt vārdu
