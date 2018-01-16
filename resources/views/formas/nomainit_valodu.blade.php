@@ -8,7 +8,7 @@
             <option value="lv">Latviešu</option>
         </select>
         {{csrf_field()}}
-        <input type="submit" value="Submit">
+        <input type="submit" value="@lang('messages.submit')!">
     </form>
 
 </div>

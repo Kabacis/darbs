@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Resursi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -41,6 +42,37 @@ class UsersController extends Controller
         return view('user_profile', array('user' => Auth::user()) );
     }
 
+
+    public function delete_user(Request $request){
+        $id = $request->user_id;
+        {
+            $user = User::find($id);
+            $user->delete();
+            return back();
+        }
+
+    }
+    public function item_delete(Request $request){
+        $id = $request->item_id;
+        {
+            $item = Resursi::find($id);
+            $item->delete();
+            return back();
+        }
+
+    }
+
+
+    public function change_role(Request $request){
+
+        $id = $request->user_id;
+
+        DB::table('users')
+            ->where('id', $id)
+            ->update(['pasparvalde_id' => request('role_id')]);
+        return back();
+
+    }
 
     public function destroy()
     {

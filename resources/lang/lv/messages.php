@@ -35,6 +35,7 @@
             'add' => 'Pievienot jaunu resursu',
             'publish' => 'Publicēt',
             'comments' => 'Komentāri',
+            'submit' => 'Aiziet',
 
 
         ];

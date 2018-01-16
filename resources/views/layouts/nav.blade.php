@@ -9,6 +9,7 @@
                             <a class="nav-link" href="{{ url('/SP') }}">@lang('messages.sc')</a>
                             <a class="nav-link" href="{{ url('/admin') }}">@lang('messages.admin')</a>
                             <a href="/profile" class="nav-link ">
+                                <img src="/uploads/avatars/{{ Auth::user()->avatar}}" class="avatar1">
                                 {{ Auth::user()->name }}
                             </a>
 

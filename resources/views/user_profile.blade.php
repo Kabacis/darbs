@@ -18,12 +18,7 @@
 
 
         <br><br>
-        <form enctype="multipart/form-data" action="/profile" method="POST">
-            {{ csrf_field() }}
-            <label>Update profile image</label>
-                <input type="file" name="avatar">
-                <input type="submit" name="Submit" class="pull-right btn btn-sm btn-primary">
-        </form>
+        @include('formas.pievienot_profila_bildi')
         <hr>
     </div>
     @auth
@@ -33,6 +28,7 @@
         <a href="/delete_acc" class="button">Dzēst savu lietotāju!</a>
 
     @endauth
+
 
 </div>
 

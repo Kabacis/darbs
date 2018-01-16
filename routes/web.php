@@ -39,6 +39,10 @@ Route::get('/admin', 'UsersController@admin')->middleware('admin');     ///admin
 Route::get('/delete_acc', 'UsersController@destroy');                   ///dzēst savu lietotāju
 Route::post('/profile/edit', 'UsersController@edit');                   ///rediģēt vārdu
 
+Route::post('/admin/delete', 'UsersController@delete_user')->middleware('admin');            ///dzēst lietotāju
+Route::post('/admin/role_change', 'UsersController@change_role')->middleware('admin');       ///mainīt lomu
+Route::post('/admin/item_delete', 'UsersController@item_delete')->middleware('admin');
+
 Route::post('/SP/comment', 'CommentController@store');                  ///pievienot komentāru
 
 

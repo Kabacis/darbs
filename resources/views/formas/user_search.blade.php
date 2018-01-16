@@ -20,6 +20,8 @@
         <tr>
             <th>Vārds Uzvārds</th>
             <th>Epasts</th>
+            <th>Lietotāja ID</th>
+
         </tr>
         </thead>
         <tbody>
@@ -27,6 +29,8 @@
             <tr>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
+                <td>{{$user->id}}</td>
+
             </tr>
         @endforeach
         </tbody>

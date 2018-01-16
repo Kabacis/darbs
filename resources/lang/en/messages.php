@@ -33,6 +33,7 @@
             'cm' => 'Council members',
             'publish' => 'Publish',
             'comments' => 'Comments',
+            'submit' => 'Submit',
         ];
 
 
